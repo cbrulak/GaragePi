@@ -16,6 +16,7 @@
 #23 = IN
 #24 = IN
 #25 = OUT 0
+4 = OUT 1
 
 #------------------------------------------------------------------------#
 
@@ -134,5 +135,4 @@ multicast = true
 #/livingroom/brightness = /devices/adc/0/float
 #/livingroom/temperature = /devices/temp0/temperature/c
 
-#/weather/temperature = /devices/bmp/temperature/c
-#/weather/pressure = /devices/bmp/pressure/hpa
+/garage/open = /GPIO/4/value
