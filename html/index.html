@@ -19,7 +19,7 @@
 		    webiopi().setFunction(DOOR, "OUT");
 
             // create button for DOOR
-	         button = webiopi().createPulseButton("pulse", "Pulse", DOOR);
+	         button =  webiopi().createButton("hold", "Hold", mousedown, mouseup);
 
             // append button to page
             $("#controls").append(button);
@@ -28,6 +28,15 @@
             webiopi().refreshGPIO(true);
 
         });
+        
+
+        function mousedown() {
+            webiopi().digitalWrite(4, 1);
+        }
+
+        function mouseup() {
+            webiopi().digitalWrite(4, 0);
+        }
 
     </script>
     <style type="text/css">
