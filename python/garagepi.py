@@ -17,6 +17,9 @@ def loop():
    # toggle on
     if (GPIO.digitalRead(DOOR) == GPIO.LOW):
         GPIO.digitalWrite(DOOR, GPIO.HIGH)
+   # toggle off
+    if (GPIO.digitalRead(DOOR) == GPIO.HIGH):
+        GPIO.digitalWrite(DOOR, GPIO.LOW)
 
   # gives CPU some time before looping again
      webiopi.sleep(1)
