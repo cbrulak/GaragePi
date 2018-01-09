@@ -48,7 +48,7 @@ doc-root = /home/pi/garagepi/html
 
 [COAP]
 # CoAP Server configuration
-#enabled = true
+enabled = false
 port = 5683
 # Enable CoAP multicast
 multicast = true
