@@ -16,10 +16,13 @@
             var DOOR = 4;
 
             // make sure the GPIO is set to OUT in case it was changed from initial startup
-		    webiopi().setFunction(DOOR, "OUT");
+//		    webiopi().setFunction(DOOR, "OUT");
 
             // create button for DOOR
-	         button =  webiopi().createButton("hold", "Hold", mousedown, mouseup);
+//	         button =  webiopi().createButton("hold", "Hold", mousedown, mouseup);
+		button = webiopi().createGPIOButton(DOOR, "SWITCH");
+
+
 
             // append button to page
             $("#controls").append(button);

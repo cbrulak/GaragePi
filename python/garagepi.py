@@ -18,11 +18,8 @@ def loop():
    
    # toggle off
     if (GPIO.digitalRead(DOOR) == GPIO.HIGH):
-        sleep(1)
+        webiopi.sleep(1)
         GPIO.digitalWrite(DOOR, GPIO.LOW)
-
-  # gives CPU some time before looping again
-    webiopi.sleep(1)
 
 # destroy function is called at WebIOPi shutdown
 def destroy():
