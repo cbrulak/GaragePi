@@ -10,6 +10,7 @@ DOOR = 4 # GPIO pin using BCM numbering
 def setup():
     # set the GPIO used by the door to output
     GPIO.setFunction(DOOR, GPIO.OUT)
+    GPIO.digitalWrite(DOOR, GPIO.LOW)
     return
 
 # loop function is repeatedly called by WebIOPi 
@@ -17,6 +18,7 @@ def loop():
    
    # toggle off
     if (GPIO.digitalRead(DOOR) == GPIO.HIGH):
+        sleep(1)
         GPIO.digitalWrite(DOOR, GPIO.LOW)
 
   # gives CPU some time before looping again
