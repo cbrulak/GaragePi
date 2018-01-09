@@ -14,7 +14,12 @@ def setup():
 
 # loop function is repeatedly called by WebIOPi 
 def loop():
-    return
+   # toggle on
+    if (GPIO.digitalRead(DOOR) == GPIO.LOW):
+        GPIO.digitalWrite(DOOR, GPIO.HIGH)
+
+  # gives CPU some time before looping again
+     webiopi.sleep(1)
 
 # destroy function is called at WebIOPi shutdown
 def destroy():

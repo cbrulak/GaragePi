@@ -48,7 +48,7 @@ doc-root = /home/pi/garagepi/html
 
 [COAP]
 # CoAP Server configuration
-enabled = true
+#enabled = true
 port = 5683
 # Enable CoAP multicast
 multicast = true
@@ -135,4 +135,4 @@ multicast = true
 #/livingroom/brightness = /devices/adc/0/float
 #/livingroom/temperature = /devices/temp0/temperature/c
 
-/garage/open = /GPIO/4/value
+/garage/doorstate = /GPIO/4/value
