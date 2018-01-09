@@ -19,9 +19,7 @@
 		    webiopi().setFunction(DOOR, "OUT");
 
             // create button for DOOR
-	        var button = webiopi().createButton("clickButton", "Garage Door", function() {
-                webiopi().outputSequence(DOOR, 3, '10');
-            });	
+	         button = webiopi().createPulseButton("pulse", "Pulse", DOOR);
 
             // append button to page
             $("#controls").append(button);
