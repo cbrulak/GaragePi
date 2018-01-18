@@ -36,7 +36,7 @@ DOOR = 4 # GPIO pin using BCM numbering
 
 # setup function is automatically called at WebIOPi startup
 def setup():
-    logger.info("Doing setup")
+    logger.info("Perfomring setup")
     # set the GPIO used by the door to output
     GPIO.setFunction(DOOR, GPIO.OUT)
     GPIO.digitalWrite(DOOR, GPIO.LOW)
@@ -47,10 +47,11 @@ def loop():
    
    # toggle off
     if (GPIO.digitalRead(DOOR) == GPIO.HIGH):
-        logger.info("turning off")
+        logger.info("sending LOW signal")
         webiopi.sleep(1)
         GPIO.digitalWrite(DOOR, GPIO.LOW)
 
 # destroy function is called at WebIOPi shutdown
-#def destroy():
+def destroy():
     #GPIO.digitalWrite(DOOR, GPIO.LOW)
+    logger.info("Performing destory")
